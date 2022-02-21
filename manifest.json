@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "SolverBook",
+  "version": "1.0",
+  "description": "Bookmark add-on for solverchat tasks",
+  "browser_action": {
+	"default_popup": "popup.html"
+  },
+  "icons": {
+    "48": "icons/main-icon.svg"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "frolovgeorgiy@gmail.com",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://solver-cms.skyeng.ru/cms/question/*"],
+      "js": ["main.js"]
+    }
+  ]
+
+}
