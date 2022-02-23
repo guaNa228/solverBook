@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 600px;
+}
+
+input.searchBookmark {
+    width: 95%;
+}
+
+input.searchBookmark:active {
+    outline: none;
+    border: none;
+}
+
+.taskList {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.taskList a {
+    max-width: 100%;
+    color: #00BFFF;
+    font-size: 22px;
+    text-decoration: none;
+    transition: .5s;
+    -webkit-box-shadow: -34px 0px 23px -1px rgba(255, 255, 255, 0.32) inset;
+    -moz-box-shadow: -34px 0px 23px -1px rgba(255, 255, 255, 0.32) inset;
+    box-shadow: -34px 0px 23px -1px rgba(255, 255, 255, 0.32) inset;
+}
+
+.taskList a:hover {
+    text-decoration: underline;
+}
