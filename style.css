@@ -31,8 +31,13 @@ img.addButton {
     cursor: pointer;
 }
 
+img.deleteModeToggle {
+    width: 4%;
+    cursor: pointer;
+}
+
 input.searchBookmark {
-    width: 90%;
+    width: 85%;
     font-size: 18px;
 }
 
@@ -56,7 +61,20 @@ input.searchBookmark:active {
     -webkit-box-shadow: -34px 0px 23px -1px rgba(255, 255, 255, 0.32) inset;
     -moz-box-shadow: -34px 0px 23px -1px rgba(255, 255, 255, 0.32) inset;
     box-shadow: -34px 0px 23px -1px rgba(255, 255, 255, 0.32) inset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+.taskList a img{
+    display: none;
+    width: 3%;
+}
+
+.taskList a img.active{
+    display: block;
+}
+
 
 .taskList a:hover {
     text-decoration: underline;
@@ -64,10 +82,10 @@ input.searchBookmark:active {
 
 .nameEnterWrapper {
     position: absolute;
-    top: -450px;
+    top: -460px;
     left: 0;
     width: 610px;
-    height: 450px;
+    height: 460px;
     background-color: rgba(0, 191, 255, .75);
     display: flex;
     align-items: center;

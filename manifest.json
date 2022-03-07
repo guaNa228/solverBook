@@ -16,11 +16,18 @@
       "strict_min_version": "45.0"
     }
   },
+  "permissions": [
+    "tabs"
+  ],
+  
+  "background": {
+    "scripts": ["js/background.js"]
+  },
 
   "content_scripts": [
     {
-      "matches": ["*://solver-cms.skyeng.ru/cms/question/*"],
-      "js": ["main.js"]
+      "matches": ["<all_urls>"],
+      "js": ["js/main.js"]
     }
   ]
 
