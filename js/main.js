@@ -1,29 +1,12 @@
 var data = JSON.parse(window.top.localStorage.getItem('solverBookData')) || [{name: 'Example bookmark', link:'https://solver-cms.skyeng.ru/cms/question/autoreload'}];
 
-let thisBody = document.querySelector('body');
 let nameEnterInput = document.querySelector('input.bookmarkName');
 let addButton = document.querySelector('.addButton');
 let nameEnterWrapper = document.querySelector('.nameEnterWrapper');
 let searchElement = document.querySelector('input.searchBookmark');
 let bookmarksListElement = document.querySelector('.taskList');
 let deleteModeToggleBtn = document.querySelector('img.deleteModeToggle');
-
 var URLtemp;
-
-
-
-var portFromCS;
-
-function connected(p) {
-  portFromCS = p;
-  portFromCS.onMessage.addListener(function(m) {
-    if(m.location !== undefined){
-      URLtemp = m.location;
-    }
-  });
-}
-
-browser.runtime.onConnect.addListener(connected);
 
 
 
@@ -135,7 +118,6 @@ renderBookList();
 searchElement.addEventListener('keyup', renderBookList);
 addButton.addEventListener('click', openAddingMenu);
 deleteModeToggleBtn.addEventListener('click', deleteBookToggle);
-
 searchElement.focus();
 
 

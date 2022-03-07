@@ -112,7 +112,7 @@ input.searchBookmark:active {
 input.bookmarkName {
     font-size: 20px;
     color: #00BFFF;
-    width: 90%;
+    width: 100%;
 }
 
 .nameEnterControls img.addNewBookmark {
